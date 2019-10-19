@@ -1,0 +1,17 @@
+{
+  "name": "grunt-starter",
+  "version": "1.0.0",
+  "description": "Starting to use grunt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tochuckwu Nwachukwu",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-mocha-test": "^0.13.3",
+    "mocha": "^6.2.2"
+  }
+}
