@@ -1,0 +1,40 @@
+header {
+  background: #7805;
+}
+
+footer {
+  background: silver;
+}
+
+body {
+  background: #00f;
+}
+body div {
+  border: dotted #00f 1px;
+  box-shadow: 10px 10px;
+}
+body a {
+  text-decoration: none;
+}
+body a:hover, body a:focus {
+  text-decoration: underline;
+}
+body form {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #999;
+}
+body p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #999;
+}
+body .notice, body .alert {
+  padding: 8px;
+  border: solid #FBCD2D 1px;
+}
+body .alert {
+  border-color: #F0F0F0;
+}

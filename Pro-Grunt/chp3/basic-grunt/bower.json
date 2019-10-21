@@ -1,0 +1,10 @@
+{
+  "name": "todo",
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "backbone": "^1.4.0"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.3.1"
+  }
+}
