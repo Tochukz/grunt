@@ -1,0 +1,158 @@
+define([ 
+    'js/collections/todos',
+    'js/views/form',
+    'js/views/todo-item'], function(Collection, FormView, TodoView) { 
+    var initialize = function() {
+        console.log('app.init');
+        var todos = new Collection();
+        new FormView().render();
+        new TodoView(todos).render();
+    };
+
+    return {
+        init: initialize
+    }
+})
+define(['backbone', 'js/models/todo'], function(Backbone, Todo) {
+    return Backbone.Collection.extend({
+        model: Todo
+    });
+});
+requirejs.config({
+  paths: {
+    backbone: "bower_components/backbone/backbone",
+    bootstrap: "bower_components/bootstrap/package",
+    jquery: "bower_components/jquery/dist/jquery",
+    requirejs: "bower_components/requirejs/require",
+    underscore: "bower_components/underscore/underscore"
+  },
+  packages: [
+
+  ],
+  shim: {
+
+  }
+});
+require(['js/app', 'jquery'], function(app, $) {
+  $(function(){
+    app.init();
+  });
+});
+
+
+//$() is jQuery isReady shorthand
+/**
+ * @name Todo
+ * @classdesc Todo Model
+ * @author Chucks Nwachukwu
+ * @exports Backbone.Model
+ */
+define(['backbone'], function(Backbone) {
+    return Backbone.Model.extend({
+
+    });
+});
+define(['handlebars'], function(Handlebars) {
+
+this["JST"] = this["JST"] || {};
+
+this["JST"]["build/templates/form.hbs"] = Handlebars.template({"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
+    var helper, alias1=container.propertyIsEnumerable;
+
+  return "<h1>"
+    + container.escapeExpression(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : container.hooks.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"title","hash":{},"data":data}) : helper)))
+    + "</h1>";
+},"useData":true});
+
+return this["JST"];
+
+});
+/* Javascript Template. Technique: 3: Loading template from DOM */
+define(['backbone'], function(Backbone) {
+    return Backbone.View.extend({
+        tagName: 'div',
+        className: 'todo-form',
+        render: function() {
+            var title = "Hello World";
+            
+            /* Technique: 1:  Using jQuery without any template engine */
+            this.$el.html(
+                $('<h1 />').text(title)
+            )
+
+            /* Technique 2: Inline templares using underscore.js templare function */
+           
+        }
+    })
+})
+define(['backbone'], function(Backbone) {
+    return Backbone.View.extend({
+        tagName: 'li',
+        className: 'todo-item',
+        render: function() {
+
+        }
+    });
+});
+ /* Javascript Template. Technique: 1:  Using jQuery without any template engine */
+define(['backbone'], function(Backbone) {
+    return Backbone.View.extend({
+        tagName: 'div',
+        className: 'todo-form',
+        render: function() {
+            var title = "Hello World";
+            this.$el.html(
+                $('<h1 />').text(title)
+            )
+        }
+    })
+})
+/* JavaScript Template. Technique 2: Inline templates using Underscore.js template function */
+define(['backbone', 'underscore'], function(Backbone, _) {
+    return Backbone.View.extend({
+        tagName: 'div',
+        className: 'todo-form',
+        template: _.template('<h1><%= title %></h1>'),
+        render: function() {
+            var title = "Hello World";
+            this.$el.html(
+                this.template({title: title})
+            );
+        }
+    });
+});
+/* Javascript Template. Technique: 3: Loading template from DOM */
+define(['backbone', 'underscore'], function(Backbone, _) {
+    return Backbone.View.extend({
+        tagName: 'div',
+        className: 'todo-form',
+        template: _.template(document.getElementById('title-tmp1').innerHTML),
+        render: function() {
+            var title = "Hello World";
+            this.$el.html(
+                this.template({title: title})
+            );
+        }
+    });
+});
+
+/**
+ The template with the id "title-tmp1" is defined in HTML document using a script tag as show below
+ <script type="text/template" id="title-tmp1">
+  <h1><%= title %></h1>
+ </script>
+ */
+/* Using Template Module */
+define(['backbone', 'js/template'], function(Backbone, Template) {
+    return Backbone.View.extends({
+        tagName: 'div',
+        className: 'todo-form',
+        template: Template["build/templates/form.hbs"],
+        render: function() {
+            var title = "Hello World!";
+            this.$rl.html(
+                this.template({title: title})
+            );
+        }
+    });
+});
