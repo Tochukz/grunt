@@ -1,0 +1,47 @@
+@import 'header';
+@import 'footer';
+
+// Varibales
+$blue: #546;
+$ash: #999;
+
+// Mixins
+@mixin fontMix($size, $weight: normal) {
+  font-family: "Times New Roman", Times, serif; 
+  font-size: $size;
+  font-weight: $weight;
+  color: $ash;
+}
+
+body {
+    background: $blue;
+    div {
+        border: dotted $blue 1px;
+        box-shadow: 10px 10px;
+    }
+    a {
+        text-decoration: none;
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+    form {
+        @include fontMix(12px)
+    }
+    p {
+        @include fontMix(14px, bold)
+    }
+    .notice {
+      padding: 8px;
+      border: solid #FBCD2D 1px;
+    }
+    .alert {
+        @extend .notice;
+        border-color: #F0F0F0;
+    }
+}
+
+// To complie ths SASS to csss run the following command on the terminal.  
+// $ sass main.scss styles.css
+

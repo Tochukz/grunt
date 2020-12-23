@@ -121,7 +121,7 @@ __.bowerrc__ file
   "directory": "build/bower_components"
 }
 ```
-#### grunt=bower-install
+#### grunt-bower-install
 The grunt-bower-install plugin is used to automate te injection of frontend JavaScript and CSS files that have been installed by Bower into your HTML.  
 To achieve this, grunt-bower-install relies on wiredep, a Node module.  
 
@@ -173,15 +173,15 @@ The _grunt-rev_ plugin is used for the versioning of asseets
 Installing _grunt-rev_ plugin  
 `$ npm install grunt-rev --save-dev`  
 
-## Chpater 4: Using Grunt with JavaScript  
+## Chapter 4: Using Grunt with JavaScript  
 Installing backbone   
 `$ bower install backbone --save-dev`   
 
 #### Asynchronous Module Definition (AMD)  
 There are two fundamental concepts - _define_ and _require_ functions
 It is best practice to not name modules and each AMD module should be defined in its own file.  
-The improves the portability of modules.
-There are tow popula JavaScript frameworks that implement AMD module loading: __require.js__ and __curl.js__ .  
+This improves the portability of modules.
+There are two popular JavaScript frameworks that implements AMD module loading: __require.js__ and __curl.js__ .  
 An alternative to AMD type modules is __CommonJS__. In this module implementation, modules are not loaded asynchronously. __CommonJS__ is intended for use in the server side and not within the browser.  
 Yet another module implementation is __Browserify__. It is a universal module loader. It also allows __CommonJS__ nd AMD modules to be loaded into the same application.
 
@@ -243,17 +243,40 @@ Installing _grunt-modernizr_
 `$ npm install grunt-modernizr --save-dev`
 
 #### grunt-contrib-uglify  
-The grunt-contrib-uglify is used for the minification and obfuscation of JavaScript code.
+The _grunt-contrib-uglify_ plugin is used for the minification and obfuscation of JavaScript code.
 It would be a good practice to run the Uglify task over the file output from the concat task.
 
 Installing _grunt-contrib-uglify_  
 `$ npm install grunt-contrib-uglify --save-dev`  
-The _grunt-contrib-uglify_ is used for the minification and obfuscation of JavaScript code.  
+The _grunt-contrib-uglify_ plugin is used for the minification and obfuscation of JavaScript code.  
 It would be a good practice to run the Uglify task over the file output from the concat task.   
 
 
 #### grunt-contrib-concat   
-The _grunt-contrib-concat_ is used to concatinate multiple javascript files.   
+The _grunt-contrib-concat_ plugin is used to concatinate multiple javascript files.   
 
 Installing _grunt-contrib-concat_  
 `$ npm install grunt-contrib-concat --save-dev`  
+
+## Chapter 5: Using Grunt with Images, VSG and Icons.  
+There two image formats considered - vector and raster images.  
+Scalable Vector Graphic (SVG) is a vector format that can be used to generate high scalable images, without an increase in file size.   
+Raster images can be served in multiple formats, such as GIT, PNG, or JPEG. They are not scalable as their file size increased with their image size.   
+
+#### grunt-contrib-imagemin   
+The _grunt-contrib-imagemin_ plugin is adds support for compressing GIF, JPEG, PNG, and SVG formats.  
+_grunt-contrib-imagemin_ wraps the NODEJS module _imagemin_, therefore any _imagemin_ module can be used with pluhin as well.
+Installing _grung-contrib-imagemin_  
+`$ npm install grunt-contrib-imagemib --save-dev`  
+
+Installing _imagemin-pngquant_ NodeJS module  
+`$ npm install imagemin-pngquant --save`   
+
+#### grunt-responsive-images  
+The _grunt-responsive-images_ plugin wraps the image processing tools __GraphicsMagick__ and __ImageMagick__ and allows a set of sizes by which to resize the original image.  
+Before the plugin can be used __GraphicsMagick__ or __ImageMagick__ must be installed.  
+Installing _grunt-responsive-images_  
+`$ npm install --save-dev grunt-responsive-images`  
+[Install GraphicsMagick on windows](http://www.graphicsmagick.org/INSTALL-windows.html)  
+After installing GraphicMagick, check if it was installed successfully,   
+`$ gm version`  

@@ -1,0 +1,39 @@
+{
+  "name": "grunt-sass",
+  "version": "1.0.0",
+  "description": "SASS compilation task using grunt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tochukwu Nwachukwu",
+  "license": "ISC",
+  "dependencies": {
+    "imagemin-pngquant": "^8.0.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-bower-install": "^1.6.0",
+    "grunt-bower-requirejs": "^2.0.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-handlebars": "^2.0.0",
+    "grunt-contrib-imagemin": "^3.1.0",
+    "grunt-contrib-jshint": "^2.1.0",
+    "grunt-contrib-nodeunit": "^2.0.0",
+    "grunt-contrib-requirejs": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-jsdoc": "^2.4.0",
+    "grunt-modernizr": "^2.0.1",
+    "grunt-recess": "^1.0.1",
+    "grunt-responsive-images": "^1.10.1",
+    "grunt-rev": "^0.1.0",
+    "grunt-uncss": "^0.9.0",
+    "grunt-usemin": "^3.1.1",
+    "jsdoc": "^3.6.3"
+  }
+}

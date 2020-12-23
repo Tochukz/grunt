@@ -1,0 +1,11 @@
+Index: app/css/main.css
+===================================================================
+--- app/css/main.css
++++ app/css/main.css
+@@ -37,6 +37,4 @@
+ }
+ body .alert {
+   border-color: #F0F0F0;
+ }
+-
+-/*# sourceMappingURL=main.css.map */
