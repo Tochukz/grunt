@@ -49,7 +49,7 @@ module.exports = function(grunt) {
                 src: 'app/css/main.css',
             }
         },
-        // grunt-contrib-cssmin plugin for minimization of CSS documents. 
+        // grunt-contrib-cssmin plugin for minimization of CSS documents.
         cssmin: {
             dist: {
                 optons: {
@@ -69,7 +69,7 @@ module.exports = function(grunt) {
                 }
             }
         },
-        // For copying file and folder from a place to another in the project directory. 
+        // For copying file and folder from a place to another in the project directory.
         copy: {
             dist: {
                 expand: true,
@@ -141,7 +141,7 @@ module.exports = function(grunt) {
                 }
             }
         },
-        // grunt-contrib-jshint for JavaScript linting  
+        // grunt-contrib-jshint for JavaScript linting
         // The 'bower' target is jshint config specific to handlebars bower packages. Same strategy can be applied to any group of files
         jshint: {
             options: {
@@ -150,7 +150,7 @@ module.exports = function(grunt) {
             dist: {
                 src: ['Gruntfile.js', 'app/js/**/.*.js']
             }, /*
-            bower: { 
+            bower: {
                 options: {
                     "eqnull": true,
                     "eqeqeq": true,
@@ -191,7 +191,7 @@ module.exports = function(grunt) {
         concat: {
           dist: {
               files: {
-                  'dist/js/main/js': ['app/js/**/*.js']
+                  'dist/js/main.js': ['app/js/**/*.js']
               }
           }
         },
@@ -232,13 +232,13 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [
                                     //'clean',
                                     'useminPrepare',
-                                    'sass', 
-                                    'bowerInstall', 
+                                    'sass',
+                                    'bowerInstall',
                                     'autoprefixer',
                                     'jshint',
                                     'modernizr',
                                     'handlebars',
-                                    'recess', 
+                                    'recess',
                                     //'uncss', // It is throwing errors saying: Could not load script with reference to JQuery bower component files.
                                     'copy',
                                     'cssmin',
@@ -265,31 +265,31 @@ The grunt-autoprefixer plugin adds vendor specific prexies to css properties whe
 
 The grunt-uncss plugin is used to remove unused CSS from your style sheet.
 
-The grunt-usemin plugin has two tasks - useminPrepare and usemin. 
-userminPrepare task is used to ready your files for the usemin task to update your HTML file with the correct reference to the static asses, such as CSS. 
-grunt-usemin generates configuration for your tasks such as concatenation and minification. 
+The grunt-usemin plugin has two tasks - useminPrepare and usemin.
+userminPrepare task is used to ready your files for the usemin task to update your HTML file with the correct reference to the static asses, such as CSS.
+grunt-usemin generates configuration for your tasks such as concatenation and minification.
 Therefore, we can remove the cssmin configuration fron Gruntfile as usemin will auto-generate it for us.
 
-The grunt-contrib-copy plugin is used to copy files and folder from one place to another within the project.  
+The grunt-contrib-copy plugin is used to copy files and folder from one place to another within the project.
 
-The grunt-rev plugin is used for assets versioning. 
+The grunt-rev plugin is used for assets versioning.
 
 The grunt-bower-requirejs plugin updates the requirejs configuration file with paths to bower components.
 It does this using the installed bower components found in the bower.json file
 
 The grunt-contrib-handlebars plugin loads templates from a directory and compile them into a sinle AMD module.
-The template can then be used within an AMD module as a dependency. 
+The template can then be used within an AMD module as a dependency.
 
 The grunt-contrib-jshint plugin is used to lint JavaScript - check for code quality, detect errors and potentiaol problems in JavaScript application.
 JShint should come before handlebars task as the output from handlebars task willnot pass all the JShint rules.
 JShint option/configuration can be defined in 3 ways - as options of task, using .jshintrc file or as jshintConfig property of package.json file.
 
-The grunt-modernizr plugin is used for feature support detection in web browers ... learn more.  
+The grunt-modernizr plugin is used for feature support detection in web browers ... learn more.
 
-The grunt-contrib-uglify is used for the minification and obfuscation of JavaScript code. 
+The grunt-contrib-uglify is used for the minification and obfuscation of JavaScript code.
 It would be a good practice to run the Uglify task over the file output from the concat task.
 
-The grunt-contrib-concat plugin is used to concatinate multiple javascript files.    
+The grunt-contrib-concat plugin is used to concatinate multiple javascript files.
 
-The grunt-jsdoc plugin makes a jsdoc task available that generates documentaion in an aHTML format. 
+The grunt-jsdoc plugin makes a jsdoc task available that generates documentaion in an aHTML format.
 */
